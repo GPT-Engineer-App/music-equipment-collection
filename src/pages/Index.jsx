@@ -43,7 +43,9 @@ const Index = () => {
 
   return (
     <Container maxW="container.md" py={5} bg="brand.900">
-      <Heading mb={6}>Music Equipment Collection</Heading>
+      <Heading mb={6} color="white">
+        Music Equipment Collection
+      </Heading>
       <Stack spacing={4}>
         <Input placeholder="Add new equipment" value={newEquipment} onChange={(e) => setNewEquipment(e.target.value)} borderColor="gray.600" color="white" />
         <Button leftIcon={<FaPlus />} colorScheme="teal" variant="solid" onClick={handleAddEquipment}>
