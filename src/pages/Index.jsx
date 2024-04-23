@@ -45,15 +45,17 @@ const Index = () => {
     <Container maxW="container.md" py={5} bg="brand.900">
       <Heading mb={6}>Music Equipment Collection</Heading>
       <Stack spacing={4}>
-        <Input placeholder="Add new equipment" value={newEquipment} onChange={(e) => setNewEquipment(e.target.value)} />
+        <Input placeholder="Add new equipment" value={newEquipment} onChange={(e) => setNewEquipment(e.target.value)} borderColor="gray.600" color="white" />
         <Button leftIcon={<FaPlus />} colorScheme="teal" variant="solid" onClick={handleAddEquipment}>
           Add Equipment
         </Button>
         <List spacing={3}>
           {equipments.map((equipment, index) => (
             <ListItem key={index} d="flex" justifyContent="space-between" alignItems="center">
-              <Text fontSize="lg">{equipment}</Text>
-              <Button leftIcon={<FaTrash />} colorScheme="red" onClick={() => handleDeleteEquipment(index)}>
+              <Text fontSize="lg" color="gray.300">
+                {equipment}
+              </Text>
+              <Button leftIcon={<FaTrash />} colorScheme="purple" onClick={() => handleDeleteEquipment(index)}>
                 Delete
               </Button>
             </ListItem>
