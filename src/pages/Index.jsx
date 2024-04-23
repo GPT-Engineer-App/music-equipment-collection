@@ -61,7 +61,7 @@ const Index = () => {
           {equipments.map((equipment, index) => (
             <ListItem key={index} d="flex" justifyContent="space-between" alignItems="center">
               <Stack direction="row" align="center" spacing={4}>
-                {equipment.image && <Image src={equipment.image} boxSize="50px" objectFit="cover" />}
+                {equipment.image && <Image src={equipment.image} boxSize="50px" objectFit="cover" alt="Equipment Image" />}
                 <Text fontSize="lg" color="gray.300">
                   {equipment.name}
                 </Text>
